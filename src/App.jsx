@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as THREE from 'three';
-import SceneInit from './lib/SceneInit';
-import TextureSelector from './TextureSelector';
+import SceneInit from '/lib/SceneInit';
+import TextureSelector from '/TextureSelector';
 
 
 

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import * as THREE from 'three';
-import SceneInit from '/lib/SceneInit';
-import TextureSelector from '/TextureSelector';
+import SceneInit from 'lib/SceneInit';
+import TextureSelector from 'TextureSelector';
 
 
 
 function App() {
-  const [floorTexture, setFloorTexture] = useState('/assets/Wood051_Color.jpg');
-  const [leftWallTexture, setLeftWallTexture] = useState('/assets/Wood051_2K_Normal.jpg');
-  const [backWallTexture, setBackWallTexture] = useState('/assets/Wood051_2K.jpg');
+  const [floorTexture, setFloorTexture] = useState('assets/Wood051_Color.jpg');
+  const [leftWallTexture, setLeftWallTexture] = useState('assets/Wood051_2K_Normal.jpg');
+  const [backWallTexture, setBackWallTexture] = useState('assets/Wood051_2K.jpg');
   const [rightWallTexture, setRightWallTexture] = useState('/assets/Wood051_Roughness.jpg');
   useEffect(() => {
     const test = new SceneInit('myThreeJsCanvas');
@@ -57,10 +57,10 @@ function App() {
           label="Floor Texture"
           texture={floorTexture}
           options={[
-            { value: "/assets/Wood051_2K_Normal.jpg", label: "Floor Color 1" },
-            { value: "/assets/Wood051_2K.jpg", label: "Floor color 2" },
-            { value: "/assets/Wood051_Color.jpg", label: "Floor color 3" },
-            { value: "/assets/Wood051_Roughness.jpg", label: "Floor color 4" },
+            { value: "assets/Wood051_2K_Normal.jpg", label: "Floor Color 1" },
+            { value: "assets/Wood051_2K.jpg", label: "Floor color 2" },
+            { value: "assets/Wood051_Color.jpg", label: "Floor color 3" },
+            { value: "assets/Wood051_Roughness.jpg", label: "Floor color 4" },
           ]}
           onChange={setFloorTexture}
         />
@@ -69,10 +69,10 @@ function App() {
           label="Left Wall Texture"
           texture={leftWallTexture}
           options={[
-            { value: "/assets/Wood051_2K_Normal.jpg", label: "Wall Color 1" },
-            { value: "/assets/Wood051_2K.jpg", label: "Left Wall color 2" },
-            { value: "/assets/Wood051_Color.jpg", label: "Left Wall color 3" },
-            { value: "/assets/Wood051_Roughness.jpg", label: "Left Wall color 4" },
+            { value: "../assets/Wood051_2K_Normal.jpg", label: "Wall Color 1" },
+            { value: "../assets/Wood051_2K.jpg", label: "Left Wall color 2" },
+            { value: "../assets/Wood051_Color.jpg", label: "Left Wall color 3" },
+            { value: "../assets/Wood051_Roughness.jpg", label: "Left Wall color 4" },
           ]}
           onChange={setLeftWallTexture}
         />
